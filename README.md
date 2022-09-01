@@ -38,6 +38,13 @@ node replace.js
 - GitHub Actions など CI 実行時
 - Next.js/Nuxt 等のビルド時
 
+例）Nuxt で SSG したあとに置換したい場合
+package.json の generate コマンドを下記のように変更する
+
+```
+"generate": "nuxt generate && node replace.js",
+```
+
 ### 補足
 
 サーバー側の環境変数で実行環境の情報を渡す想定。（本番環境なら 'prod' 、ステージングなら 'dev' など）
